@@ -211,7 +211,8 @@
     "then-queue": "^1.3.0",
     "toobusy-js": "^0.5.1",
     "validator": "^9.0.0",
-    "web-push": "^3.3.3"
+    "web-push": "^3.3.3",
+    "snyk": "^1.316.1"
   },
   "resolutions": {
     "immutable": "3.7.4",
@@ -290,7 +291,9 @@
     "process:emails:test": "(cd email-template-scripts && python3 inline-html-emails.py && node sendgrid-sync.js)",
     "process:emails:prod": "(cd email-template-scripts && python3 inline-html-emails.py && node sendgrid-sync.js prod)",
     "process:emails:send": "(cd email-template-scripts && node send-test-emails.js brian@spectrum.chat)",
-    "deploy": "node scripts/deploy"
+    "deploy": "node scripts/deploy",
+    "snyk-protect": "snyk protect",
+    "prepare": "yarn run snyk-protect"
   },
   "lint-staged": {
     "*.js": [
@@ -299,5 +302,6 @@
       "git add"
     ]
   },
-  "pre-commit": "lint:staged"
+  "pre-commit": "lint:staged",
+  "snyk": true
 }
