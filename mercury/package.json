@@ -1,12 +1,14 @@
 {
   "scripts": {
-    "start": "NODE_ENV=production node main.js"
+    "start": "NODE_ENV=production node main.js",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "dependencies": {
     "bull": "^3.9.1",
-    "datadog-metrics": "^0.8.1",
+    "datadog-metrics": "^0.9.3",
     "debug": "^4.1.1",
-    "ioredis": "3.2.2",
+    "ioredis": "4.27.8",
     "now-env": "^3.2.0",
     "performance-now": "^2.1.0",
     "raven": "^2.6.4",
@@ -15,9 +17,11 @@
     "rethinkdbdash": "^2.3.31",
     "rethinkhaberdashery": "^2.3.32",
     "source-map-support": "^0.4.18",
-    "toobusy-js": "^0.5.1"
+    "toobusy-js": "^0.5.1",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "json-stringify-pretty-compact": "^1.2.0"
-  }
+  },
+  "snyk": true
 }
