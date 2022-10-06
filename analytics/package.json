@@ -1,16 +1,18 @@
 {
   "version": "1.0.0",
   "scripts": {
-    "start": "NODE_ENV=production node main.js"
+    "start": "NODE_ENV=production node main.js",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "dependencies": {
     "amplitude": "^3.5.0",
-    "aws-sdk": "^2.454.0",
-    "bull": "3.3.10",
-    "datadog-metrics": "^0.8.1",
+    "aws-sdk": "^2.814.0",
+    "bull": "3.5.3",
+    "datadog-metrics": "^0.9.3",
     "debug": "^4.1.1",
     "faker": "^4.1.0",
-    "ioredis": "3.2.2",
+    "ioredis": "4.27.8",
     "lodash.intersection": "^4.4.0",
     "node-env-file": "^0.1.8",
     "now-env": "^3.2.0",
@@ -24,6 +26,8 @@
     "sanitize-filename": "^1.6.1",
     "sha1": "^1.1.1",
     "source-map-support": "^0.5.12",
-    "toobusy-js": "^0.5.1"
-  }
+    "toobusy-js": "^0.5.1",
+    "@snyk/protect": "latest"
+  },
+  "snyk": true
 }
