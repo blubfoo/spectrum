@@ -1,20 +1,22 @@
 {
   "scripts": {
-    "start": "NODE_ENV=production node main.js"
+    "start": "NODE_ENV=production node main.js",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "dependencies": {
-    "aws-sdk": "^2.454.0",
+    "aws-sdk": "^2.814.0",
     "bull": "^3.9.1",
-    "datadog-metrics": "^0.8.1",
+    "datadog-metrics": "^0.9.3",
     "debug": "^4.1.1",
     "decode-uri-component": "^0.2.0",
-    "draft-js": "^0.10.5",
+    "draft-js": "^0.11.7",
     "faker": "^4.1.0",
     "imgix-core-js": "^1.3.0",
-    "ioredis": "3.2.2",
-    "lodash": "^4.17.11",
+    "ioredis": "4.27.8",
+    "lodash": "^4.17.21",
     "lodash.intersection": "^4.4.0",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.7",
     "now-env": "^3.2.0",
     "performance-now": "^2.1.0",
     "raven": "^2.6.4",
@@ -25,9 +27,11 @@
     "rethinkhaberdashery": "^2.3.32",
     "sanitize-filename": "^1.6.1",
     "source-map-support": "^0.4.18",
-    "toobusy-js": "^0.5.1"
+    "toobusy-js": "^0.5.1",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "json-stringify-pretty-compact": "^1.2.0"
-  }
+  },
+  "snyk": true
 }
