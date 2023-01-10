@@ -6,11 +6,11 @@
   "dependencies": {
     "amplitude": "^3.5.0",
     "aws-sdk": "^2.454.0",
-    "bull": "3.3.10",
+    "bull": "3.5.3",
     "datadog-metrics": "^0.8.1",
     "debug": "^4.1.1",
     "faker": "^4.1.0",
-    "ioredis": "3.2.2",
+    "ioredis": "4.0.0",
     "lodash.intersection": "^4.4.0",
     "node-env-file": "^0.1.8",
     "now-env": "^3.2.0",
